@@ -2,6 +2,23 @@ body {
     background-color: yellow;
 }
 
+/* Navbar */
+.nav-item:hover {
+  color: red;
+}
+
+.nav-item:active {
+  color: yellow;
+}
+
+/* Page title */
+.text-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* Footer section */
 .footer {
     position: absolute;
     bottom: 0;
@@ -10,6 +27,5 @@ body {
     line-height: 60px;
     background-color: #343a40;
     color: white;
-    padding-bottom: 30px;
 }
 
