@@ -16,10 +16,21 @@ nav div div a:hover {
 }
 
 
+/* Product panels */
 
-/*.panel {
+.panel-default {
+    border-radius: 25px;
+    padding: 0 10px;
+    border: 2px solid black;
     background-color: white;
-}*/
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.product-info {
+    height: 100%;
+    margin-left: 5px;
+}
 
 .product {
     background-size: contain;
@@ -36,25 +47,13 @@ nav div div a:hover {
     margin-top: 30px;
 }
 
-.panel-default {
-    border-radius: 25px;
-    padding: 0 10px;
-    border: 2px solid black;
-    background-color: white;
-}
-
-.product-info {
-    height: 100%;
-    margin-left: 5px;
-}
-
 .product-description {
     min-height: 40px;
 }
 
 /* Footer section */
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 60px;
