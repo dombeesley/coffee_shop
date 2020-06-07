@@ -12,7 +12,7 @@ nav a:hover {
 .text-section {
     text-align: center;
     margin-top: 50px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.582);
     border-radius: 25px;
 }
 
@@ -54,6 +54,10 @@ nav a:hover {
 
 }
 
+.product-name{
+    font-family: 'Pacifico', cursive;
+}
+
 .product-description {
     min-height: 40px;
 }
@@ -73,3 +77,26 @@ nav a:hover {
     color: white;
 }
 
+/* News page */
+
+.story-img {
+    margin-top: 25%;
+    display: block;
+    margin-left:5px;
+}
+
+.img-circle{
+    width:100px;
+    height: 100px; 
+}
+
+.authorinfo{
+    font-size: 12px;
+
+}
+
+.news-panel {
+    border-color: transparent;
+    border-radius: 0;
+    background-color: white;
+}

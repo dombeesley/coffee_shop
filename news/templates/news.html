@@ -4,26 +4,38 @@
 
     <h2>The latest news from the world of coffee</h2>
 
-    {% for post in posts %}
+    <div class="container">
         <div class="row">
-            <div class="col-md-2 col-sm-3 text-center">
-                <a class="story-img" href="#">
-                    <img src="/media/images/profile.jpg" class="img-circle">
-                </a>
-                <p><span class="boldtext">Author:</span> The Coffee Break</p>
-            </div>
-            <div class="col-md-10 col-sm-9">
-                <h3>{{ post.title }}</h3>
-                <div class="row">
-                    <div class="col-xs-9">
-                        <p>{{ post.content }}</p>
-                        <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-                        <p><span class="boldtext">Views:</span> {{post.views}}</p>
-                        <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
-                    </div>
+            <div class="col-xs-12 col-sm-10 col-md-12">
+                <div class="news-panel">
+                    <div class="news-body">
+
+                        {% for post in posts %}
+                            <div class="row">
+                                <div class="col-md-2 col-sm-3 text-center">
+                                    <a class="story-img" href="#">
+                                        <img src="/media/images/profile.jpg" class="img-circle">
+                                    </a>
+                                    <p class="authorinfo"><span class="boldtext">Author:</span> The Coffee Break</p>
+                                </div>
+                                <div class="col-md-10 col-sm-9">
+                                    <h3>{{ post.title }}</h3>
+                                    <div class="row">
+                                        <div class="col-xs-9">
+                                            <p>{{ post.content }}</p>
+                                            <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
+                                            <p><span class="boldtext">Views:</span> {{post.views}}</p>
+                                            <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>    
                 </div>
             </div>
-            <hr>
         </div>
-    {% endfor %}
+    </div>
+
+
 {% endblock %}
