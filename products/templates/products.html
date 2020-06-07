@@ -7,7 +7,7 @@
             <div class="product-info">
                 <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 
-                <h3>{{ product.name }}</h3>
+                <h3 class="product-name">{{ product.name }}</h3>
                 <p class="product-description">{{ product.description|truncatewords:20 }}</p>
                 <p>£{{ product.price }}</p>
 
