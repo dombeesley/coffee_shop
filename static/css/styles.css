@@ -78,6 +78,9 @@ nav a:hover {
 }
 
 /* News page */
+.newstitle{
+    text-align: center;
+}
 
 .story-img {
     margin-top: 25%;
