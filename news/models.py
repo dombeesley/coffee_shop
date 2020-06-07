@@ -3,11 +3,11 @@ from django.utils import timezone
 
 # Create your models here.
 
+# Model for a blog post
+
 
 class Post(models.Model):
-    """
-    A single Blog post
-    """
+   
     title = models.CharField(max_length=200)
     content = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
