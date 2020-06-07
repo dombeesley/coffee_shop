@@ -103,4 +103,5 @@ nav a:hover {
     border-color: transparent;
     border-radius: 0;
     background-color: white;
+    border-radius: 25px;
 }
