@@ -3,10 +3,10 @@
 {% block content %}
 
     <div class="row">
-        <div class="text-section col-md-6 offset-md-3 col-lg-8 offset-lg-2">
-            <h2 class="newstitle title">The latest news from the world of coffee</h2>
+        <div class="text-section newsinfo col-md-6 offset-md-3 col-lg-8 offset-lg-2">
+            <h2 class="title">The latest news from the world of coffee</h2>
             <p> 
-                From coffee exhibitions and festivals around the world to hip new coffee bars, 
+                Here, you’ll find everything from coffee exhibitions and festivals around the world to hip new coffee bars, 
                 and from the latest cutting-edge coffee gadgets to the wildest new coffee flavours – 
                 read on for some of the latest breaking news stories on coffee, and become a coffee expert.
             </p>
@@ -28,7 +28,12 @@
                                     <p class="authorinfo"><b>Author:</b> The Coffee Break</p>
                                 </div>
                                 <div class="col-md-10 col-sm-9">
-                                    <h3>{{ post.title }}</h3>
+                                    <h3 class="post-title">{{ post.title }}</h3>
+
+                                    {% if post.image %}
+                                        <img class="post-img" src="/media/{{ post.image }}">
+                                    {% endif %}
+                                    
                                     <div class="row">
                                         <div class="col-xs-9">
                                             <p>{{ post.content }}</p>
@@ -40,6 +45,7 @@
                                 </div>
                             </div>
                         {% endfor %}
+
                     </div>    
                 </div>
             </div>
