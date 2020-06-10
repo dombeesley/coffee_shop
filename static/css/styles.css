@@ -23,12 +23,12 @@ nav a:hover {
 
 /* Product information panels */
 .row.row-flex {
+    width:100%;
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
     margin-bottom: 30px;
-    padding-bottom: 40px;
-
+    padding-bottom: 40px; 
 }
 
 .panel-default {
@@ -36,7 +36,6 @@ nav a:hover {
     padding: 0 10px;
     border: 2px solid black;
     background-color: white;
-    margin-right: 5px;
     margin-top: 5px;
 }
 
