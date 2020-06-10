@@ -22,6 +22,14 @@ nav a:hover {
 }
 
 /* Product information panels */
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+
+}
 
 .panel-default {
     border-radius: 25px;
@@ -44,15 +52,6 @@ nav a:hover {
     width: 200px;
     height: 200px;
     margin: 0 auto;
-}
-
-.row.row-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-bottom: 40px;
-
 }
 
 .product-name{
