@@ -65,6 +65,19 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+.modal-image {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.modal-description {
+    font-size: large;
+}
+
 /* Footer section */
 .footer {
     position: fixed;
