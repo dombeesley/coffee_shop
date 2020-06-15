@@ -3,6 +3,16 @@
 {% block content %}
 
 <div class="row row-flex">
+
+    {% if not cart_items %}
+    <div class="text-section col-md-6 offset-md-3">
+            <h1>Your basket's empty!</h1>
+
+            <a href="{% url 'products' %}" class="btn btn-dark product-btn"><i class="fa fa-cart-plus" aria-hidden="true"></i> Go shopping</a>
+    </div>
+
+    {% else %}
+
     {% for item in basket_items %}
     
     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
@@ -39,4 +49,5 @@
     </div>
 </div>
 
+{% endif %}
 {% endblock %}
