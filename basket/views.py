@@ -20,7 +20,7 @@ def add_to_basket(request, id):
     return redirect(reverse('index'))
 
 
-def adjust_basket(request, id):
+def edit_basket(request, id):
     quantity = int(request.POST.get('quantity'))
     basket = request.session.get('basket', {})
 
