@@ -2,5 +2,41 @@
 
 {% block content %}
 
+<div class="row row-flex">
+    {% for item in basket_items %}
+    
+    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
+        
+        <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+        
+        <div class="caption">
+            <h3 class="product-name">{{ item.product.name }}</h3>
+            <p class="product-description">{{ item.product.description }}</p>
+            <p>£{{ item.product.price }}</p>
+            <p> 
+                <form class="form-inline" method="post" action="{% url 'edit_basket' item.id %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">Quantity</div>
+                            <input name="quantity" type="number" min="0" max="999" class="form-control">
+                            <div class="input-group-addon">{{item.quantity}}</div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-dark product-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>
+                </form>
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row">
+    <div class="text-section col-md-6 offset-md-3">
+        <p>Total: £{{ total }}</p>
+        <p><a href="#" class="btn btn btn-dark product-btn" role="button"><i class="fa fa-money" aria-hidden="true"></i> Checkout</a></p>
+    </div>
+</div>
 
 {% endblock %}
