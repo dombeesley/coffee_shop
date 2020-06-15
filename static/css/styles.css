@@ -156,3 +156,31 @@ nav a:hover {
 .post-content {
     padding-right: 30px;
 }
+
+@media only screen and (max-width: 600px) {
+    .post-content {
+        
+        margin: 30px;
+    }
+
+    .post-img {
+        margin-left:7px;
+    } 
+
+    .news-stories {
+        width: 100%;
+    }
+
+    .news-panel {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .post-img {
+        height: auto;
+        width: auto;
+        display: block;
+        margin:auto;
+    } 
+} 

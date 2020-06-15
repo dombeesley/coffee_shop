@@ -29,17 +29,22 @@
                                     <p class="authorinfo"><b>Author:</b> The Coffee Break</p>
                                 </div>
                                 <div class="col-md-10 col-sm-9">
-                                    <h3 class="post-title">{{ post.title }}</h3>
-
-                                    {% if post.image %}
-                                        <img class="post-img" src="/media/{{ post.image }}">
-                                    {% endif %}
                                     
-                                    <div class="row post-content">
-                                        <div class="col-xs-8">
-                                            <p>{{ post.content|linebreaks }}</p>
-                                            <p><b>Published on:</b> {{ post.published_date }} <b>Views:</b> {{post.views}} </p>
-                                            <p><b> Tags:</b> {{ post.tag }}</p>
+                                    <h3 class="post-title">{{ post.title }}</h3>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            {% if post.image %}
+                                                <img class="post-img rounded" src="/media/{{ post.image }}">
+                                            {% endif %}
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <div class="row post-content">
+                                                <div class="col-12">
+                                                    <p>{{ post.content|linebreaks }}</p>
+                                                    <p><b>Published on:</b> {{ post.published_date }} <b>Views:</b> {{post.views}} </p>
+                                                    <p><b> Tags:</b> {{ post.tag }}</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
