@@ -145,6 +145,7 @@ nav a:hover {
 .post-title {
     margin-top:5px;
     text-align: center;
+    text-decoration: underline;
 }
 
 .post-img {
