@@ -19,6 +19,7 @@ from accounts import urls as urls_accounts
 from products import urls as urls_products
 from products.views import all_products
 from news.views import get_posts
+from basket import urls as urls_basket
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -29,4 +30,5 @@ urlpatterns = [
     url(r'^products/', include(urls_products)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     url(r'^news/', get_posts, name='news'),
+    url(r'^basket/', include(urls_basket)),
 ]
