@@ -44,10 +44,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'view_basket' %}"><i class="fa fa-shopping-basket"></i> Basket</a>
-                            {% if product_count > 0 %}
-                            <label class="badge badge-warning">{{ product_count }}</label>
-                            {% endif %}
+                            <a class="nav-link" href="{% url 'view_basket' %}"><i class="fa fa-shopping-basket"></i> Basket
+                                {% if product_count > 0 %}
+                                    <label class="badge badge-success">{{ product_count }}</label>
+                                {% endif %}
+                            </a>
                         </li>
 
                         </ul>
