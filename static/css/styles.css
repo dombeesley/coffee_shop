@@ -89,6 +89,12 @@ nav a:hover {
     font-size: large;
 }
 
+.success-box{
+    margin-top: 15px;
+    border-radius: 25px;
+    text-align: center;
+}
+
 /* Basket page */
 .basket-panel {
     margin-top:25px;
