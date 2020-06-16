@@ -9,7 +9,7 @@
 
                 <h3 class="product-name">{{ product.name }}</h3>
                 <p class="product-description">{{ product.description|truncatewords:20 }}</p>
-                <p>£{{ product.price }}</p>
+                <p><b>Price -</b> £{{ product.price }}</p>
 
                 <button type="button" class="btn btn-dark product-btn" data-toggle="modal" data-target="#myModal{{ product.id }}"><i class="fa fa-info-circle"></i> Find out more</button>
 
@@ -40,7 +40,7 @@
                         <div class="product product-image modal-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}">
                         </div>
                         <p class="product-description modal-description">{{ product.description }} </p>
-                        <p>£{{ product.price }}</p>
+                        <p><b>Price -</b> £{{ product.price }}</p>
                     </div>
                 </div>
                 <div class="modal-footer">
