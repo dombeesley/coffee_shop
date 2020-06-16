@@ -40,39 +40,39 @@
         </div>
 <!-- Modal with more information on products -->
         <div class="modal fade" id="myModal{{ product.id }}" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title product-name">{{ product.name }}</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        X
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="panel-body">
-                        <div class="product product-image modal-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title product-name">{{ product.name }}</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            X
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="panel-body">
+                            <div class="product product-image modal-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}">
+                            </div>
+                            <p class="product-description modal-description">{{ product.description }} </p>
+                            <p><b>Price -</b> £{{ product.price }}</p>
                         </div>
-                        <p class="product-description modal-description">{{ product.description }} </p>
-                        <p><b>Price -</b> £{{ product.price }}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Close</button>
+                        
+                        <form method="POST" action="{% url 'add_to_basket' product.id %}">
+                            {% csrf_token %}
+                            <div class="input-group form-group">
+                                <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-dark product-btn"><i class="fa fa-shopping-basket"></i> Add to Basket</button>
+                                </span>
+                            </div>
+                        </form>
+
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Close</button>
-		            
-                    <form method="POST" action="{% url 'add_to_basket' product.id %}">
-                        {% csrf_token %}
-                        <div class="input-group form-group">
-                            <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
-                            <span class="input-group-btn">
-                                <button type="submit" class="btn btn-dark product-btn"><i class="fa fa-shopping-basket"></i> Add to Basket</button>
-                            </span>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>  
-    </div>
+            </div>  
+        </div>
 
     {% endfor %}
 </div>
