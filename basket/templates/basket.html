@@ -2,20 +2,20 @@
 
 {% block content %}
 
-<div class="row row-flex">
+<div class="row">
 
     {% if not basket_items %}
-    <div class="text-section col-md-6 offset-md-3">
-            <h1>Your basket's empty!</h1>
+    <div class="text-section newsinfo col-md-6 offset-md-3 col-lg-8 offset-lg-2">
+            <h2>Your basket's empty!</h2>
 
-            <a href="{% url 'products' %}" class="btn btn-dark product-btn"><i class="fa fa-cart-plus" aria-hidden="true"></i> Go shopping</a>
+            <a href="{% url 'products' %}" class="btn btn-dark product-btn"><i class="fa fa-cart-plus" aria-hidden="true"></i> Click here to go shopping</a>
     </div>
 
-    {% else %}
+    {% else %} 
 
     {% for item in basket_items %}
     
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default basket-panel">
         
         <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
         
@@ -24,17 +24,16 @@
             <p class="product-description">{{ item.product.description }}</p>
             <p>£{{ item.product.price }}</p>
             <p> 
-                <form class="form-inline" method="post" action="{% url 'edit_basket' item.id %}">
+                <form class="form-inline row" method="post" action="{% url 'edit_basket' item.id %}">
                     {% csrf_token %}
-                    <div class="form-group">
-                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                    <div class="form-group col-6">
+                        <label for="exampleInputAmount" class="sr-only">New amount</label>
                         <div class="input-group">
-                            <div class="input-group-addon">Quantity</div>
-                            <input name="quantity" type="number" min="0" max="999" class="form-control">
-                            <div class="input-group-addon">{{item.quantity}}</div>
+                            <div class="input-group-addon">Quantity: </div>
+                            <input name="quantity" type="number" min="0" max="999" class="form-control" placeholder="{{ item.quantity }}">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-dark product-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>
+                    <button type="submit" class="btn btn-dark product-btn col-4"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update</button>
                 </form>
             </p>
         </div>
@@ -42,9 +41,9 @@
     {% endfor %}
 </div>
 
-<div class="row">
+<div class="row total-panel">
     <div class="text-section col-md-6 offset-md-3">
-        <p>Total: £{{ total }}</p>
+        <p class="total-info">Total: £{{ total }}</p>
         <p><a href="#" class="btn btn btn-dark product-btn" role="button"><i class="fa fa-money" aria-hidden="true"></i> Checkout</a></p>
     </div>
 </div>

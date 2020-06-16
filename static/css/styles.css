@@ -1,12 +1,16 @@
 body {
-    /* background-image: url("https://st2.depositphotos.com/1022665/6342/i/950/depositphotos_63425815-stock-photo-burlap-sack-texture.jpg"); */
-    background-image: url("https://besthqwallpapers.com/img/original/98181/brown-sackcloth-4k-brown-fabric-burlap-sack-sackcloth-textures.jpg");
+    background-image: url("https://st2.depositphotos.com/1022665/6342/i/950/depositphotos_63425815-stock-photo-burlap-sack-texture.jpg"); 
+    /*background-image: url("https://besthqwallpapers.com/img/original/98181/brown-sackcloth-4k-brown-fabric-burlap-sack-sackcloth-textures.jpg"); */
     background-size: cover;
 }
 
 /* Navbar */
 nav a:hover {
   color:#E0E0E0 !important;
+}
+
+.nav-link:active {
+    color: #ffffff;
 }
 
 .nav-title {
@@ -18,7 +22,7 @@ nav a:hover {
 /* Page title */
 .text-section {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
     background-color: rgba(255, 255, 255, 0.726);
     border-radius: 25px;
 }
@@ -83,6 +87,22 @@ nav a:hover {
 
 .modal-description {
     font-size: large;
+}
+
+/* Basket page */
+.basket-panel {
+    margin-top:25px;
+}
+
+.total-panel{
+    margin-bottom:30px;
+    padding-bottom: 40px;
+}
+
+.total-info{
+    margin-top:10px;
+    font-size: 40px;
+    font-family: 'Pacifico', cursive;
 }
 
 /* Footer section */
