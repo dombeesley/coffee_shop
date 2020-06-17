@@ -221,3 +221,9 @@ nav a:hover {
 .login-link{
     text-align: center;
 }
+
+/* Profile Page */
+.profile-title {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
