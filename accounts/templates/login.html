@@ -12,11 +12,16 @@
     
     
     {% block content %}
-        <form method="POST">
-            {% csrf_token %} 
-            {{ login_form | as_bootstrap}}
-            <button type="submit" class="btn btn-default">Login</button>
-        </form>
-        
-        <p><a href="{% url 'password_reset' %}">Forgot Password</a></p>
+        <div class="display panel panel-default login-panel">
+            <h2>Enter your details below:</h2>
+            <form method="POST">
+                {% csrf_token %} 
+                {{ login_form | as_bootstrap }}
+                <button type="submit" class="btn btn-dark"><i class="fa fa-sign-in"></i> Log In</button>
+                
+            </form>
+            <p class="login-link">Have you forgotten your password? <a href="{% url 'password_reset' %}">Click here to reset it.</a>
+            <p class="login-link">Or are you new here? <a href="{% url 'register' %}">Head here to sign up.</a></p>
+            
+        </div>
     {% endblock %}

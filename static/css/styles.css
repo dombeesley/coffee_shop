@@ -211,3 +211,13 @@ nav a:hover {
         margin:auto;
     } 
 } 
+
+/* Log In Page */
+.login-panel{
+    margin-top: 25px;
+    padding: 15px;
+}
+
+.login-link{
+    text-align: center;
+}
