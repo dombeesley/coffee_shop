@@ -227,3 +227,9 @@ nav a:hover {
     font-family: 'Pacifico', cursive;
     text-align: center;
 }
+
+/* Registration Page */
+.register-panel{
+    margin-bottom:80px;
+    padding-bottom: 20px;
+}
