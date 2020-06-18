@@ -89,6 +89,16 @@ nav a:hover {
     font-size: large;
 }
 
+.modal-button{
+    margin-bottom:5px;
+    text-align:center;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: center;
+}
+
 .success-box{
     margin-top: 15px;
     border-radius: 25px;

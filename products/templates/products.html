@@ -24,18 +24,19 @@
                 <p class="product-description">{{ product.description|truncatewords:20 }}</p>
                 <p><b>Price -</b> £{{ product.price }}</p>
 
-                <button type="button" class="btn btn-dark product-btn" data-toggle="modal" data-target="#myModal{{ product.id }}"><i class="fa fa-info-circle"></i> Find out more</button>
+                <div class="panel-footer">
+                    <button type="button" class="btn btn-dark product-btn" data-toggle="modal" data-target="#myModal{{ product.id }}"><i class="fa fa-info-circle"></i> Find out more</button>
 
-                <form method="post" action="{% url 'add_to_basket' product.id %}">
-                    {% csrf_token %}
-                    <div class="input-group form-group">
-                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
-                        <span class="input-group-btn">
-                            <button type="submit" class="btn btn-dark product-btn"><i class="fa fa-shopping-basket"></i> Add to Basket</button>
-                        </span>
-                    </div> 
-                </form>
-
+                    <form method="post" action="{% url 'add_to_basket' product.id %}">
+                        {% csrf_token %}
+                        <div class="input-group form-group">
+                            <input name="quantity" type="number" value="1" min="1" max="999" class="form-control" placeholder="Quantity">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-dark product-btn"><i class="fa fa-shopping-basket"></i> Add to Basket</button>
+                            </span>
+                        </div> 
+                    </form>
+                </div>
             </div>
         </div>
 <!-- Modal with more information on products -->
@@ -57,18 +58,19 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-dark" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Close</button>
-                        
-                        <form method="POST" action="{% url 'add_to_basket' product.id %}">
-                            {% csrf_token %}
-                            <div class="input-group form-group">
-                                <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
-                                <span class="input-group-btn">
-                                    <button type="submit" class="btn btn-dark product-btn"><i class="fa fa-shopping-basket"></i> Add to Basket</button>
-                                </span>
-                            </div>
-                        </form>
-
+                        <div class="row">
+                            <button type="button" class="btn btn-dark modal-button col-10" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Close</button>
+                            
+                            <form class="col-10 modal-button" method="POST" action="{% url 'add_to_basket' product.id %}">
+                                {% csrf_token %}
+                                <div class="input-group form-group">
+                                    <input name="quantity" type="number" value="1" min="1" max="999" class="form-control" placeholder="Quantity">
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-dark product-btn"><i class="fa fa-shopping-basket"></i> Add to Basket</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>  
