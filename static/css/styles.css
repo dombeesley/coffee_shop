@@ -51,6 +51,8 @@ nav a:hover {
     border: 2px solid black;
     background-color: white;
     margin-top: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-info {
@@ -183,6 +185,8 @@ nav a:hover {
 
 .post-title {
     margin-top:5px;
+    font-family: 'Arvo', serif;
+    font-size: 40px;
     text-align: center;
     text-decoration: underline;
 }
