@@ -65,6 +65,11 @@
                             </a>
                         </li>
 
+                        <form action="{% url 'search' %}" method="get">
+                            <input type="text" name="q" placeholder="Search" aria-label="Search">
+                            <button type="search" class="btn btn-light"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
+                        </form>
+
                         </ul>
                     </div>
     </nav>
@@ -80,6 +85,7 @@
     
     <!-- block content -->
     <div class="container">
+
         {% block content %} 
         {% endblock %}
     </div>
