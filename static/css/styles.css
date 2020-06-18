@@ -18,6 +18,9 @@ nav a:hover {
     font-size: 25px;
 }
 
+.search-input{
+    margin-right: 5px;
+}
 
 /* Page title */
 .text-section {

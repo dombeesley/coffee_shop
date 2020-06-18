@@ -65,8 +65,8 @@
                             </a>
                         </li>
 
-                        <form action="{% url 'search' %}" method="get">
-                            <input type="text" name="q" placeholder="Search" aria-label="Search">
+                        <form action="{% url 'search' %}" method="get" class="form-inline">
+                            <input type="text" name="q" placeholder="Search" aria-label="Search" class="form-control form-control-sm w-50 search-input">
                             <button type="search" class="btn btn-light"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
                         </form>
 
