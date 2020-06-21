@@ -195,16 +195,18 @@ nav a:hover {
     margin-top: 5px;
     height: 300px;
     width: auto;
+    overflow:hidden;
 }
 
 .post-content {
-    padding-right: 30px;
+    margin-right:10px;
+    text-justify: inter-character;
 }
 
 @media only screen and (max-width: 600px) {
     .post-content {
         
-        margin: 30px;
+        margin: 10px;
     }
 
     .post-img {
