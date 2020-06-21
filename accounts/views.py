@@ -27,14 +27,14 @@ def login(request):
 
         if login_form.is_valid():
             user = auth.authenticate(username=request.POST['username'],
-                                    password=request.POST['password'])
-            messages.success(request, "You have successfully logged in!")
+                                     password=request.POST['password'])
+            messages.success(request, "You're now logged in!")
 
             if user:
                 auth.login(user=user, request=request)
                 return redirect(reverse('index'))
             else:
-                login_form.add_error(None, "Your username or password is incorrect")
+                login_form.add_error(None, "Sorry, but your username or password is incorrect")
     else:
         login_form = UserLoginForm()
     return render(request, 'login.html', {'login_form': login_form})
