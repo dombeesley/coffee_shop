@@ -3,14 +3,47 @@
     {% block content %}
         
         <div class="display panel panel-default login-panel">
-            <h2 class="profile-title">Welcome back, {{ user }}!</h2>
-            <h3><i class="fa fa-user"></i> Your personal information:</h3>
-            <h4>Your e-mail address is -</h4>
-            <p>{{ profile.email }}</p>
-            <h4>Your username is -</h4>
-            <p>{{ user }}</p>
-            <h3><i class="fa fa-th-list" aria-hidden="true"></i> Order history:</h3>
+            <div>
+                <h2 class="profile-title">Welcome back, {{ user }}!</h2>
+                <h3><i class="fa fa-user"></i> Your personal information:</h3>
+                <h4>Your e-mail address is -</h4>
+                <p>{{ profile.email }}</p>
+                <h4>Your username is -</h4>
+                <p>{{ user }}</p>
+                <h3><i class="fa fa-th-list" aria-hidden="true"></i> Order history:</h3>
 
+                {% if orders %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+
+                                <tr>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            {% for order in orders %}
+                                <tr>
+
+                                    <th scope="row">{{ order.date }}</th>
+                                    <td colspan="2"><i class="fa fa-dollar-sign"></i> {{ order.total }}</td>
+                                    <td colspan="2"><a href="#" class="btn btn-dark">View Details</a></td>
+                
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                {% else %}
+                    <span>
+                        <strong>You haven't ordered anything yet!</strong>
+                    </span>
+                {% endif %}
+            </div>
             <a type="btn" class="btn btn-dark" href="{% url 'products' %}">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> Carry on shopping!
             </a>
