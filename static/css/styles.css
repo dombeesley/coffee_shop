@@ -247,6 +247,10 @@ nav a:hover {
     text-align: center;
 }
 
+.profile-btn {
+    margin-top:10px;
+}
+
 /* Registration Page */
 .register-panel{
     margin-bottom:80px;
