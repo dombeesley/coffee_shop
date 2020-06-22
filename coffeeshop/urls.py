@@ -21,6 +21,7 @@ from products.views import all_products
 from news.views import get_posts
 from basket import urls as urls_basket
 from search import urls as urls_search
+from checkout import urls as urls_checkout
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -33,4 +34,5 @@ urlpatterns = [
     url(r'^news/', get_posts, name='news'),
     url(r'^basket/', include(urls_basket)),
     url(r'^search/', include(urls_search)),
+    url(r'^checkout/', include(urls_checkout)),
 ]
