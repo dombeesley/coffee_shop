@@ -5,14 +5,14 @@ from products.models import Product
 
 
 class Order(models.Model):
-    full_name = models.CharField(max_length=50, blank=False)
-    phone_number = models.CharField(max_length=20, blank=False)
-    country = models.CharField(max_length=40, blank=False)
-    postcode = models.CharField(max_length=20, blank=True)
-    town_or_city = models.CharField(max_length=40, blank=False)
-    street_address1 = models.CharField(max_length=40, blank=False)
-    street_address2 = models.CharField(max_length=40, blank=False)
-    county = models.CharField(max_length=40, blank=True)
+    full_name = models.CharField(max_length=50, blank=False, verbose_name="Your full name:")
+    phone_number = models.CharField(max_length=20, blank=False, verbose_name="Your phone number:")
+    country = models.CharField(max_length=40, blank=False, verbose_name="Country:")
+    postcode = models.CharField(max_length=20, blank=True, verbose_name="Post code:")
+    town_or_city = models.CharField(max_length=40, blank=False, verbose_name="Town or city:")
+    street_address1 = models.CharField(max_length=40, blank=False, verbose_name="Address (Line 1):")
+    street_address2 = models.CharField(max_length=40, blank=False, verbose_name="Address (Line 2):")
+    county = models.CharField(max_length=40, blank=True, verbose_name="County:")
     date = models.DateField()
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE, null=True)
 
