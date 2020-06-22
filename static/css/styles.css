@@ -25,7 +25,7 @@ nav a:hover {
 /* Page title */
 .text-section {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 70px;
     background-color: rgba(255, 255, 255, 0.726);
     border-radius: 25px;
 }
@@ -255,4 +255,29 @@ nav a:hover {
 .register-panel{
     margin-bottom:80px;
     padding-bottom: 20px;
+}
+
+/* Checkout Page */
+
+.whatsin-basket{
+    margin-top:25px;
+}
+
+.checkout-panel{
+    margin-bottom:30px;
+    padding-bottom: 40px;
+}
+
+.checkout-total{
+    text-align: center;
+    padding:10px;
+    background-color: rgba(255, 255, 255, 0.726);
+    border-radius: 25px;
+}
+
+.paymentform{
+    height:100%;
+    padding:5px;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
 }
