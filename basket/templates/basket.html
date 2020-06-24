@@ -44,7 +44,11 @@
 <div class="row total-panel">
     <div class="text-section col-md-6 offset-md-3">
         <p class="total-info">Total: £{{ total }}</p>
-        <p><a href="{% url 'checkout' %}" class="btn btn-dark product-btn" role="button"><i class="fa fa-money" aria-hidden="true"></i> Checkout</a></p>
+        <p>
+            <a href="{% url 'checkout' %}" class="btn btn-dark product-btn" role="button">
+                <i class="fa fa-money" aria-hidden="true"></i> Checkout
+            </a>
+        </p>
     </div>
 </div>
 
