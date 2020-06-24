@@ -15,7 +15,7 @@
 
     {% for item in basket_items %}
     
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default basket-panel">
+    <div class="col-xs-10 offset-xs-1 col-sm-6 offset-sm-0 col-md-4 display panel panel-default basket-panel">
         
         <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
         
@@ -30,7 +30,7 @@
                         <label for="exampleInputAmount" class="sr-only">New amount</label>
                         <div class="input-group">
                             <div class="input-group-addon">Quantity: </div>
-                            <input name="quantity" type="number" min="0" max="999" class="form-control" placeholder="{{ item.quantity }}">
+                            <input name="quantity" type="number" value="1" min="0" max="999" class="form-control" placeholder="{{ item.quantity }}">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-dark product-btn col-4"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update</button>
@@ -44,7 +44,7 @@
 <div class="row total-panel">
     <div class="text-section col-md-6 offset-md-3">
         <p class="total-info">Total: £{{ total }}</p>
-        <p><a href="#" class="btn btn btn-dark product-btn" role="button"><i class="fa fa-money" aria-hidden="true"></i> Checkout</a></p>
+        <p><a href="{% url 'checkout' %}" class="btn btn-dark product-btn" role="button"><i class="fa fa-money" aria-hidden="true"></i> Checkout</a></p>
     </div>
 </div>
 
