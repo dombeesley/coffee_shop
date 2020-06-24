@@ -2,8 +2,8 @@
     
     {% block content %}
         
-        <div class="display panel panel-default login-panel">
-            <div>
+        <div class="display panel panel-default login-panel row">
+            <div class="col-xs-10 offset-xs-1 col-md-6">
                 <h2 class="profile-title">Welcome back, {{ user }}!</h2>
                 <h3><i class="fa fa-user"></i> Your personal information:</h3>
                 <h4>Your e-mail address is -</h4>
@@ -13,7 +13,8 @@
                 <a type="btn" class="btn btn-dark profile-btn" href="{% url 'password_reset' %}">
                     <i class="fa fa-undo" aria-hidden="true"></i> Would you like to reset your password?
                 </a>
-
+            </div>
+            <div class="col-xs-10 offset-xs-1 col-md-6">
                 <h3><i class="fa fa-th-list" aria-hidden="true"></i> Order history:</h3>
 
                 {% if orders %}
@@ -47,13 +48,15 @@
                         <strong>You haven't ordered anything yet!</strong>
                     </span>
                 {% endif %}
+                <p>
+                    <a type="btn" class="btn btn-dark profile-btn" href="{% url 'products' %}">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Carry on shopping!
+                    </a>
+                    <a type="btn" class="btn btn-dark profile-btn" href="{% url 'logout' %}">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </p>
             </div>
-            <a type="btn" class="btn btn-dark profile-btn" href="{% url 'products' %}">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Carry on shopping!
-            </a>
-            <a type="btn" class="btn btn-dark profile-btn" href="{% url 'logout' %}">
-                <i class="fa fa-sign-out"></i> Log out
-            </a>
         </div>
 
         
