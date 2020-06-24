@@ -10,6 +10,10 @@
                 <p>{{ profile.email }}</p>
                 <h4>Your username is -</h4>
                 <p>{{ user }}</p>
+                <a type="btn" class="btn btn-dark profile-btn" href="{% url 'password_reset' %}">
+                    <i class="fa fa-undo" aria-hidden="true"></i> Would you like to reset your password?
+                </a>
+
                 <h3><i class="fa fa-th-list" aria-hidden="true"></i> Order history:</h3>
 
                 {% if orders %}
