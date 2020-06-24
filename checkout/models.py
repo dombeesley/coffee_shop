@@ -6,6 +6,7 @@ from products.models import Product
 
 class Order(models.Model):
     full_name = models.CharField(max_length=50, blank=False, verbose_name="Your full name:")
+    user = models.CharField(max_length=50, blank=False, null=True, verbose_name="Your username:")
     phone_number = models.CharField(max_length=20, blank=False, verbose_name="Your phone number:")
     country = models.CharField(max_length=40, blank=False, verbose_name="Country:")
     postcode = models.CharField(max_length=20, blank=True, verbose_name="Post code:")
@@ -14,7 +15,6 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=40, blank=False, verbose_name="Address (Line 2):")
     county = models.CharField(max_length=40, blank=True, verbose_name="County:")
     date = models.DateField()
-    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
