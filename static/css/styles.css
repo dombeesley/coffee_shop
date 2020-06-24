@@ -235,6 +235,7 @@ nav a:hover {
 .login-panel{
     margin-top: 25px;
     padding: 15px;
+    margin-bottom: 70px;
 }
 
 .login-link{
@@ -244,7 +245,7 @@ nav a:hover {
 /* Profile Page */
 .profile-title {
     font-family: 'Pacifico', cursive;
-    text-align: center;
+    text-align: right;
 }
 
 .profile-btn {
@@ -280,4 +281,9 @@ nav a:hover {
     height:100%;
     padding:5px;
     margin-bottom: 70px;
+}
+
+/* Password reset form */
+.reset-form{
+    text-align: center;
 }
