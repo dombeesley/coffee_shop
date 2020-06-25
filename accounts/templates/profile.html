@@ -4,7 +4,7 @@
     {% block content %}
         
         <div class="display panel panel-default login-panel row">
-            <div class="col-xs-10 offset-xs-1 col-md-6">
+            <div class="col-sm-12 col-md-6">
                 <h2 class="profile-title">Welcome back, {{ user }}!</h2>
                 <h3><i class="fa fa-user"></i> Your personal information:</h3>
                 <h4>Your e-mail address is -</h4>
@@ -15,16 +15,16 @@
                     <i class="fa fa-undo" aria-hidden="true"></i> Would you like to reset your password?
                 </a>
             </div>
-            <div class="col-xs-10 offset-xs-1 col-md-6">
+            <div class="col-sm-12 col-md-6">
                 <h3><i class="fa fa-th-list" aria-hidden="true"></i> Order history:</h3>
 
                 {% if orders %}
                     <div class="table-responsive">
                         <table class="table table-hover">
-                            <thead>
+                            <thead class="thead-dark">
 
                                 <tr>
-                                    <th scope="col">Date</th>
+                                    <th scope="col">Date of Order</th>
                                     <th scope="col">Total</th>
                                 </tr>
                             </thead>
