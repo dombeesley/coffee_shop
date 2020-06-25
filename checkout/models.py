@@ -1,13 +1,17 @@
 from django.db import models
 from products.models import Product
 from django_countries.fields import CountryField
+from django.contrib.auth import get_user_model
 
 # Create your models here.
 
+User = get_user_model()
+
 
 class Order(models.Model):
+    # Need to set user as current user's username by default. How?
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, null=True, editable=False, related_name='orders', verbose_name="Your username:")
     full_name = models.CharField(max_length=50, blank=False, verbose_name="Your full name:")
-    username = models.CharField(max_length=50, blank=False, null=True, verbose_name="Your username:")
     phone_number = models.CharField(max_length=20, blank=False, verbose_name="Your phone number:")
     country = CountryField(blank_label='Where do you live?', null=True, blank=True, verbose_name="Country:")
     postcode = models.CharField(max_length=20, blank=True, verbose_name="Post code:")
