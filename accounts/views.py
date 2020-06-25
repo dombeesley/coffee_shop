@@ -1,13 +1,14 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
+from checkout.models import Order, OrderLineItem
+from products.models import Product
 
 
 def index(request):
     """Return the index.html file"""
-    return render(request,  'index.html')
+    return render(request, 'index.html')
 
 
 @login_required
@@ -64,7 +65,14 @@ def registration(request):
         "registration_form": registration_form})
 
 
+@login_required
 def user_profile(request):
-    """The user's profile page"""
-    user = User.objects.get(email=request.user.email)
-    return render(request, 'profile.html', {"profile": user})
+    """A view that displays the profile page of a logged in user"""
+    orders = Order.objects.all()
+    for order in orders:
+        order.total = 0
+        line_item = OrderLineItem.objects.filter(order=order)
+        for item in line_item:
+            product = Product.objects.get(id=item.product.id)
+            order.total += product.price * item.quantity
+    return render(request, "profile.html", {"orders": orders})
