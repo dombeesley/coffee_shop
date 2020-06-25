@@ -8,7 +8,7 @@
                 <h2 class="profile-title">Welcome back, {{ user }}!</h2>
                 <h3><i class="fa fa-user"></i> Your personal information:</h3>
                 <h4>Your e-mail address is -</h4>
-                <p>{{ profile.email }}</p>
+                <p>{{ user.email }}</p>
                 <h4>Your username is -</h4>
                 <p>{{ user }}</p>
                 <a type="btn" class="btn btn-dark profile-btn" href="{% url 'password_reset' %}">
@@ -18,7 +18,7 @@
             <div class="col-xs-10 offset-xs-1 col-md-6">
                 <h3><i class="fa fa-th-list" aria-hidden="true"></i> Order history:</h3>
 
-                {% if order %}
+                {% if orders %}
                     <div class="table-responsive">
                         <table class="table table-hover">
                             <thead>
@@ -26,7 +26,6 @@
                                 <tr>
                                     <th scope="col">Date</th>
                                     <th scope="col">Total</th>
-                                    <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,7 +35,6 @@
 
                                     <th scope="row">{{ order.date }}</th>
                                     <td colspan="2">£ {{ order.total }}</td>
-                                    <td colspan="2"><a href="#" class="btn btn-dark">View Details</a></td>
                 
                                 </tr>
                             {% endfor %}
