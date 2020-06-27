@@ -26,6 +26,7 @@
                                 <tr>
                                     <th scope="col">Date of Order</th>
                                     <th scope="col">Total</th>
+                                    <th scope="col">Number of Products </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,7 +35,8 @@
                                 <tr>
 
                                     <th scope="row">{{ order.date }}</th>
-                                    <td colspan="2">£ {{ order.total }}</td>
+                                    <td>£ {{ order.total }}</td>
+                                    <td>{{ order.quantity }}</td>
                 
                                 </tr>
                             {% endfor %}

@@ -68,11 +68,14 @@ def registration(request):
 @login_required
 def user_profile(request):
     """A view that displays the profile page of a logged in user"""
-    orders = Order.objects.all()
+    if request.user.is_authenticated:
+        orders = Order.objects.filter(
+            user=request.user)
     for order in orders:
         order.total = 0
         line_item = OrderLineItem.objects.filter(order=order)
         for item in line_item:
             product = Product.objects.get(id=item.product.id)
             order.total += product.price * item.quantity
+            order.quantity = item.quantity
     return render(request, "profile.html", {"orders": orders})
