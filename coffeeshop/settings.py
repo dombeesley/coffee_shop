@@ -14,7 +14,7 @@ import os
 import dj_database_url
 from os import path
 if path.exists("env.py"):
-  import env 
+  import env
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -178,3 +178,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = os.environ.get("EMAIL_ADDRESS")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_PASSWORD")
 EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_ADDRESS")
