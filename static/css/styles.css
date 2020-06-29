@@ -199,7 +199,7 @@ nav a:hover {
 .post-img {
     margin-top: 5px;
     height: auto;
-    max-width: 100%;
+    max-width: 70%;
     overflow:hidden;
 }
 
@@ -230,7 +230,7 @@ nav a:hover {
 @media only screen and (max-width: 320px) {
     .post-img {
         height: auto;
-        width: auto;
+        width: 90%;
         display: block;
         margin:auto;
     } 
