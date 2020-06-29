@@ -13,9 +13,9 @@
      
     {% endfor %}
 {% endif %}  
-
+<div class="container-fluid">
 <!-- Displays all products -->
-<div class="row row-flex">
+<div class="row product-panels">
     <!-- Displays all products in reverse order -->
     {% for product in products reversed %}
         <div class="col-xs-12 col-sm-12 col-md-4 display panel panel-default">
@@ -89,5 +89,6 @@
         </div>
 
     {% endfor %}
+</div>
 </div>
 {% endblock %}
