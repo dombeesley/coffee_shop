@@ -22,6 +22,25 @@ nav a:hover {
     margin-right: 5px;
 }
 
+/* Footer section */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #343a40;
+    color: white;
+}
+
+.social-icons {
+    font-size: 40px;
+}
+
+.social-icons i:hover {
+  color:rgba(161, 161, 161, 0.63);
+}
+
 /* Page title */
 .text-section {
     text-align: center;
@@ -131,25 +150,6 @@ nav a:hover {
     font-family: 'Pacifico', cursive;
 }
 
-/* Footer section */
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-color: #343a40;
-    color: white;
-}
-
-.social-icons {
-    font-size: 40px;
-}
-
-.social-icons i:hover {
-  color:rgba(161, 161, 161, 0.63);
-}
-
 /* News page */
 .news-stories{
     margin-bottom:50px;
@@ -198,8 +198,8 @@ nav a:hover {
 
 .post-img {
     margin-top: 5px;
-    height: 400px;
-    width: auto;
+    height: auto;
+    max-width: 100%;
     overflow:hidden;
 }
 
@@ -216,7 +216,7 @@ nav a:hover {
 
     .post-img {
         margin-left:7px;
-    } 
+       }
 
     .news-stories {
         width: 100%;
@@ -287,7 +287,7 @@ nav a:hover {
     margin-bottom: 70px;
 }
 
-/* Password reset form */
+/* Password reset pages */
 .reset-form{
     text-align: center;
 }
