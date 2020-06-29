@@ -37,13 +37,13 @@ nav a:hover {
 
 /* Product information panels */
 .row.row-flex {
-    width:100%;
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
     margin-bottom: 30px;
     padding-bottom: 40px; 
-}
+    padding-left: 25px;
+} 
 
 .panel-default {
     border-radius: 25px;
@@ -89,6 +89,14 @@ nav a:hover {
     height: 400px;
     margin: 0 auto;
 }
+
+@media only screen and (max-width: 320px) {
+    .modal-image {
+        width: auto;
+        display: block;
+        margin:auto;
+    } 
+} 
 
 .modal-description {
     font-size: large;
