@@ -286,3 +286,11 @@ nav a:hover {
 .reset-form{
     text-align: center;
 }
+
+.accountform{
+    text-align: center;
+}
+
+.reset-title{
+    font-family: 'Pacifico', cursive;
+}
