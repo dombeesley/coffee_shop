@@ -13,12 +13,11 @@
         </div>
     </div>
 
-   
-        <div class="container news-stories row">
+
+    <div class="container">
+        <div class="news-stories row">
             <div class="col-xs-12">
-
                 {% for post in posts %}
-
                     <div class="news-panel">
                         <div class="news-body">
                             <div class="row">
@@ -44,8 +43,6 @@
                                                     <p><b> Tags:</b> {{ post.tag }}</p>
                                                 </div>
                                             </div>
-                                        
-                                    
                                 </div>
                             </div>
                         </div>    
@@ -55,5 +52,6 @@
 
             </div>
         </div>
+    </div>
 
 {% endblock %}
