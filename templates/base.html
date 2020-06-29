@@ -77,7 +77,8 @@
                                 {% endif %}
                             </a>
                         </li>
-
+                        
+                        <!-- Search box -->
                         <form action="{% url 'search' %}" method="get" class="form-inline">
                             <input type="text" name="q" placeholder="Search" aria-label="Search" class="form-control form-control-sm w-50 search-input">
                             <button type="search" class="btn btn-light"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
@@ -101,6 +102,7 @@
 
         {% block content %} 
         {% endblock %}
+
     </div>
     
     <!-- Footer -->
