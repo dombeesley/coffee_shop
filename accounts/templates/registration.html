@@ -11,12 +11,17 @@
     {% endblock %} 
 
     {% block content %}
+        <!-- Form for user to sign up -->
         <div class="display panel panel-default login-panel register-panel">
+            <!-- Link to log in page -->
             <h4>If you already have an account, you can <a href="{% url 'login' %}">sign in here.</a></h4>
+            <!-- Instructions for user -->
             <h4>Enter your details below to register:</h4>
-
+            
+            <!-- Form for user to enter details -->
             <form method="POST">
                 {% csrf_token %} {{ registration_form | as_bootstrap }}
+                <!-- Button to submit details -->
                 <button type="submit" class="btn btn-dark"><i class="fa fa-user-plus"></i> Register</button>
             </form>
         </div>

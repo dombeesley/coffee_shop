@@ -2,6 +2,7 @@
 
 {% block content %}
 
+    <!-- Title and introduction to news page -->
     <div class="row">
         <div class="text-section newsinfo col-md-6 offset-md-3 col-lg-8 offset-lg-2">
             <h2 class="title">The latest news from the world of coffee</h2>
@@ -17,29 +18,36 @@
     <div class="container">
         <div class="news-stories row">
             <div class="col-xs-12">
+                <!-- Displays panel for each news post -->
                 {% for post in posts %}
                     <div class="news-panel">
                         <div class="news-body">
                             <div class="row">
                                 <div class="col-sm-3 col-md-2 text-center">
+                                    <!-- Author's profile image -->
                                     <a class="story-img" href="#">
                                         <img src="/media/images/profile.jpg" class="img-circle">
                                     </a>
+                                    <!-- Author information -->
                                     <p class="authorinfo"><b>Author:</b> The Coffee Break</p>
                                 </div>
                                 <div class="col-md-10 col-sm-9">
                                     
+                                    <!-- Post's title -->
                                     <h3 class="post-title">{{ post.title }}</h3>
                                     
-                                        
+                                            <!-- Displays post image if there is one -->
                                             {% if post.image %}
                                                 <img class="post-img rounded mx-auto d-block" src="/media/{{ post.image }}">
                                             {% endif %}
                                         
                                             <div class="row post-content">
                                                 <div class="col-12">
+                                                    <!-- Post's content -->
                                                     <p>{{ post.content|linebreaks }}</p>
+                                                    <!-- Post information, including publication date and views -->
                                                     <p><b>Published on:</b> {{ post.published_date }} <b>Views:</b> {{post.views}} </p>
+                                                    <!-- Post's tags -->
                                                     <p><b> Tags:</b> {{ post.tag }}</p>
                                                 </div>
                                             </div>

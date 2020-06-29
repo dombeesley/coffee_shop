@@ -2,6 +2,7 @@
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
 
+<!-- Code for Stripe -->
 {% block head_js %}
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
@@ -13,6 +14,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- Explains to the user this is showing what's in their order -->
 <div class="row">
     <div class="checkout-total whatsin-basket col-md-6 offset-md-3">
         <p class="total-info">What's in your order?</p>
@@ -20,15 +22,22 @@
 </div>
 
 <div class="row row-flex">
+    <!-- For loop shows information for each item in basket -->
     {% for item in basket_items %}
+        <!-- Panel for each product -->
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
+                <!-- Product image -->
                 <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
 
                 <div class="caption">
+                    <!-- Product name -->
                     <h3 class="product-name">{{ item.product.name }}</h3>
+                    <!-- Truncated description of product -->
                     <p class="product-description">{{ item.product.description|truncatewords:20 }}</p>
+                    <!-- Number of products in basket -->
                     <p><strong>Number of items -</strong> {{ item.quantity }}</p>
+                    <!-- Product price -->
                     <p><strong>Price -</strong> £{{ item.product.price }}</p>
                 </div>
             </div>
@@ -36,14 +45,18 @@
     {% endfor %}
 </div>
 
+<!-- Shows the user the total cost of products in basket -->
 <div class="row">
     <div class="checkout-total col-md-6 offset-md-3">
         <p class="total-info">Total: £{{ total }}</p>
+        <!-- Button to return to basket page -->
         <a href="{% url 'view_basket' %}" class="btn btn-dark"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Back To My Basket</a>
+        <!-- Button to return to home page -->
         <a href="{% url 'view_basket' %}" class="btn btn-dark"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carry On Shopping</a>
     </div>
 </div>
 
+<!-- Form for user to pay by submitting information through Stripe -->
 <div class="row">
     <div class="display panel panel-default login-panel payment-form col-md-8 offset-md-2">
         <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
@@ -63,6 +76,7 @@
             </div>
 
             {% csrf_token %}
+            <!-- Button to submit payment -->
             <div class="form-group col-md-12">
                 <input class=" btn btn-dark" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
             </div>

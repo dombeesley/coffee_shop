@@ -3,12 +3,13 @@
 {% block content %}
 <div class="container-fluid">
 
+<!-- Tells user basket is empty if it's empty -->
 {% if not basket_items %}
 
  
         <div class="text-section newsinfo col-md-6 offset-md-3 col-lg-8 offset-lg-2">
                     <h2>Your basket's empty!</h2>
-
+                    <!-- Button to take user to product page -->
                     <a href="{% url 'products' %}" class="btn btn-dark product-btn"><i class="fa fa-cart-plus" aria-hidden="true"></i> Click here to go shopping</a>
         </div>
 
@@ -16,16 +17,22 @@
 
     <div class="row">
 
+<!-- Displays information on products if there are products in the basket -->
 {% for item in basket_items %}
         
         <div class="col-xs-12 col-sm-6 col-md-4 display panel panel-default basket-panel">
             
+            <!-- Product image -->
             <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
             
             <div class="caption">
+                <!-- Product name -->
                 <h3 class="product-name">{{ item.product.name }}</h3>
+                <!-- Product description -->
                 <p class="product-description">{{ item.product.description }}</p>
+                <!-- Product price -->
                 <p>£{{ item.product.price }}</p>
+                <!-- Allows user to update number of products in the basket -->
                 <p> 
                     <form class="form-inline row" method="post" action="{% url 'edit_basket' item.id %}">
                         {% csrf_token %}
@@ -44,16 +51,18 @@
 {% endfor %}
     </div>
 
-        <div class="row total-panel">
-            <div class="text-section col-md-6 offset-md-3">
-                <p class="total-info">Total: £{{ total }}</p>
-                <p>
-                    <a href="{% url 'checkout' %}" class="btn btn-dark product-btn" role="button">
-                        <i class="fa fa-money" aria-hidden="true"></i> Checkout
-                    </a>
-                </p>
-            </div>
+    <!-- Shows total cost of items in basket -->
+    <div class="row total-panel">
+        <div class="text-section col-md-6 offset-md-3">
+            <p class="total-info">Total: £{{ total }}</p>
+            <!-- Button takes user to checkout page -->
+            <p>
+                <a href="{% url 'checkout' %}" class="btn btn-dark product-btn" role="button">
+                    <i class="fa fa-money" aria-hidden="true"></i> Checkout
+                </a>
+            </p>
         </div>
+    </div>
 
 {% endif %}
 </div>

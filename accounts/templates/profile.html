@@ -2,27 +2,33 @@
     {% block page_heading %}{{ user }}'s Profile Page{% endblock %}
 
     {% block content %}
-        
+        <!-- Profile page to display user information -->
         <div class="display panel panel-default login-panel row">
             <div class="col-sm-12 col-md-6">
+                <!-- Shows user's username -->
                 <h2 class="profile-title">Welcome back, {{ user }}!</h2>
                 <h3><i class="fa fa-user"></i> Your personal information:</h3>
+                <!-- User's email address -->
                 <h4>Your e-mail address is -</h4>
                 <p>{{ user.email }}</p>
+                <!-- User's username -->
                 <h4>Your username is -</h4>
                 <p>{{ user }}</p>
+                <!-- Button for user to reset their password -->
                 <a type="btn" class="btn btn-dark profile-btn" href="{% url 'password_reset' %}">
                     <i class="fa fa-undo" aria-hidden="true"></i> Would you like to reset your password?
                 </a>
             </div>
+            <!-- Shows user's order history -->
             <div class="col-sm-12 col-md-6">
                 <h3><i class="fa fa-th-list" aria-hidden="true"></i> Order history:</h3>
-
+                <!-- Displays a table if user has made orders -->
                 {% if orders %}
                     <div class="table-responsive">
                         <table class="table table-hover">
                             <thead class="thead-dark">
 
+                                <!-- Table headings -->
                                 <tr>
                                     <th scope="col">Date of Order</th>
                                     <th scope="col">Total</th>
@@ -31,11 +37,14 @@
                             </thead>
                             <tbody>
 
+                            <!-- New row for each of the user's orders -->
                             {% for order in orders %}
                                 <tr>
-
+                                    <!-- Date of the order -->
                                     <th scope="row">{{ order.date }}</th>
+                                    <!-- Total cost of the order -->
                                     <td>£ {{ order.total }}</td>
+                                    <!-- Number of products in the order -->
                                     <td>{{ order.quantity }}</td>
                 
                                 </tr>
@@ -43,16 +52,19 @@
                             </tbody>
                         </table>
                     </div>
-                    
+
+                <!-- Displays if user hasn't made any orders -->    
                 {% else %}
                     <span>
                         <strong>You haven't ordered anything yet!</strong>
                     </span>
                 {% endif %}
                 <p>
+                    <!-- Takes user to products page -->
                     <a type="btn" class="btn btn-dark profile-btn" href="{% url 'products' %}">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i> Carry on shopping!
                     </a>
+                    <!-- Logs the user out -->
                     <a type="btn" class="btn btn-dark profile-btn" href="{% url 'logout' %}">
                         <i class="fa fa-sign-out"></i> Log out
                     </a>

@@ -12,15 +12,19 @@
     
     
     {% block content %}
+        <!-- Form for user to fill in details and log in -->
         <div class="display panel panel-default login-panel">
             <h2>Enter your details below:</h2>
             <form method="POST">
                 {% csrf_token %} 
                 {{ login_form | as_bootstrap }}
+                <!-- Log in button -->
                 <button type="submit" class="btn btn-dark"><i class="fa fa-sign-in"></i> Log In</button>
                 
             </form>
+            <!-- Takes user to password reset page -->
             <p class="login-link">Have you forgotten your password? <a class="btn btn-dark" href="{% url 'password_reset' %}">Click here to reset it.</a></p>
+            <!-- Takes user to registration page -->
             <p class="login-link">Or are you new here? <a class="btn btn-dark" href="{% url 'register' %}">Head here to sign up.</a></p>
             
         </div>

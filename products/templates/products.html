@@ -3,13 +3,14 @@
 
 {% block content %}
 
-  {% if messages %}
-    {% for message in messages %}
+    <!-- Displays message if there is one -->
+    {% if messages %}
+        {% for message in messages %}
 
-    <div class="alert alert-success alert-dismissible success-box offset-md-4 col-md-4">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        {{ message }}
-    </div>
+        <div class="alert alert-success alert-dismissible success-box offset-md-4 col-md-4">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ message }}
+        </div>
      
     {% endfor %}
 {% endif %}  
