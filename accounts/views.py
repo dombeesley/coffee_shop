@@ -73,9 +73,10 @@ def user_profile(request):
             user=request.user)
     for order in orders:
         order.total = 0
+        order.quantity = 0
         line_item = OrderLineItem.objects.filter(order=order)
         for item in line_item:
             product = Product.objects.get(id=item.product.id)
             order.total += product.price * item.quantity
-            order.quantity = item.quantity
+            order.quantity += item.quantity
     return render(request, "profile.html", {"orders": orders})
