@@ -1,39 +1,74 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Dominic Beesley’s 4th Milestone Project
 
-Welcome dombeesley,
+This project is my fourth milestone project for Code Institute, and it’s the Full Stack Frameworks with Django Milestone Project. The aim of the project, according to the project guidelines, was to build a full-stack site based around business logic used to control a centrally-owned dataset. The project also contains an authentication mechanism, and allows users paid access to the site's data and or other activities based on the dataset, such as the purchase of a product service.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+In order to fulfil these aims, I’ve created a website that I’ve called ‘The Coffee Break.’ The website allows users to register and purchase bags of coffee or coffee accessories from around the world, as well as read about coffee-related news.
 
-## Gitpod Reminders
+The project has been deployed using Heroku, and can be viewed at [http://domscoffeeshop.herokuapp.com/]( http://domscoffeeshop.herokuapp.com/).
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## UX <hr>
 
-A blue button should appear to click: *Make Public*,
+Add image of website on different devices from Am I Responsive.
 
-Another blue button should appear to click: *Open Browser*.
+My website, ‘The Coffee Break,’ is a website for users to visit and buy new coffee-related products, as well as find out about what’s happening in the coffee world.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Before I started making the website, I made a rough wireframe of what I hoped to achieve. 
 
-A blue button should appear to click: *Make Public*,
+### User Stories
+I have identified three types main users who wold potentially be using this site, which are the site owner, registered users, and non-registered (or anonymous) users.
 
-Another blue button should appear to click: *Open Browser*.
+#### For the site owner:
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+#### For registered users:
 
-## Updates Since The Instructional Video
+#### For non-registered users:
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Features <hr>
+### Existing Features
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Features To Implement Later
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Technologies Used <hr>
+### Programming Languages
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Websites
 
---------
+### Tools
 
-Happy coding!
+## Testing <hr>
+## Screen Sizes and Devices
+
+## Getting Others to Test it
+
+## Using Online Tools and Websites
+
+## Deployment <hr>
+### Introduction
+* This website was deployed using Heroku.
+* The code for the site was written using Gitpod.
+
+### Creating the app on Heroku
+
+### Pushing to Heroku
+* On my Gitpod workspace, I logged into Heroku using the CLI, with the email and password that I’d previously used to sign in to Heroku.
+* Before I pushed the code from Gitpod to the Heroku server, I created two files – requirements.txt (which contained a list of the dependencies my site was using) and a Procfile.
+* Once those were created, I was able to push the code to Heroku using the commands ‘git add,’ ‘git commit,’ and then ‘git push heroku master.’
+
+### Deploying the website
+
+## Credits <hr>
+
+### Code
+* I used [W3C Markup Validation service](https://validator.w3.org/) to validate the HTML code.
+* I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate the CSS code.
+
+### Content
+
+### Media
+
+### Social Media
+
+### Acknowledgements
+* I received inspiration and guidance for this project from my mentor, Oluwaseun Owonikoko.
