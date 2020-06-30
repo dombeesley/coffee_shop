@@ -1,3 +1,4 @@
+/* Body */
 body {
     /*background-image: url("https://st2.depositphotos.com/1022665/6342/i/950/depositphotos_63425815-stock-photo-burlap-sack-texture.jpg"); */
     background-image: url("https://storage.needpix.com/rsynced_images/background-1409303225Yv1.jpg"); 
@@ -35,6 +36,11 @@ nav a:hover {
 
 .social-icons {
     font-size: 40px;
+    color: white;
+}
+
+.social-icons a{
+    color: white;
 }
 
 .social-icons i:hover {
