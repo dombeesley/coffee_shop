@@ -33,14 +33,69 @@ Before I started making the website, I made some rough wireframes of what I hope
 I have identified three types main users who wold potentially be using this site, which are the site owner, registered users, and non-registered (or anonymous) users.
 
 #### For the site owner:
+* As the site owner, I want to clearly communicate the goals of the website.
+* As the site owner, I want to attract users to the website.
+* As the site owner, I want to let users sign up and register to buy products from the website.
+* As the site owner, I want to let users log in, if they’ve previously registered to the website.
+* As the site owner, I want to let users know about the different coffee-related products that are available on the site.
+* As the site owner, I want to let users see how many items are in their basket by looking at the navbar.
+* As the site owner, I want to let users search for a particular product using the navbar.
+* As the site owner, I want to let users add items to their basket.
+* As the site owner, I want to let users update the amount of each items in their basket.
+* As the site owner, I want to let users remove an item from their basket.
+* As the site owner, I want to let users buy products.
+* As the site owner, I want to let users view their profile page.
+* As the site owner, I want to let users visit my profile page and see all of their information, such as usernames and email addresses.
+* As the site owner, I want to let users reset their password by clicking on the button on the profile page.
+* As the site owner, I want to let users see their order history, with information such as the date that the order was placed, the amount of items in the order, and the amount that they paid.
+* As the site owner, I want to let users log out from the website when they’re done and want to leave.
 
 #### For registered users:
+* As a user, I want to be able to visit the site.
+* As a user, I want to be able to sign up if it’s my first time visiting.
+* As a user, I want to be able to log in after I’ve signed up.
+* As a user, I want to be able to reset my password.
+* As a user, I want to be able to receive an email with instructions on how to go about resetting my password.
+* As a user, I want to be able to view the different products available.
+* As a user, I want to be able to search for a particular product using the navbar.
+* As a user, I want to be able to see more information about the products by clicking on the ‘Find out more’ button.
+* As a user, I want to be able to add a selection of items to my basket.
+* As a user, I want to be able to see how many items are in my basket by looking at the navbar.
+* As a user, I want to be able to view my basket and update the number of items in there.
+* As a user, I want to be able to remove an item from my basket after I’ve already added it to my basket.
+* As a user, I want to be able to see the price of all the items in my basket
+* As a user, I want to be able to visit the checkout page.
+* As a user, I want to be able to enter my details and pay.
+* As a user, I want to be able to receive a message telling me my payment was successful.
+* As a user, I want to be able to visit my profile page and see my information, such as username and email address.
+* As a user, I want to be able to reset my password from the profile page.
+* As a user, I want to be able to see my order history, with information such as the date that the order was placed, the number of items in the order, and the total amount that I paid.
+* As a user, I want to be able to log out afterwards by clicking on the log out button.
+* As a user, I want to be able to visit the news page and read the latest news stories that are there.
 
 #### For non-registered users:
-
+* As a non-registered user, I want to be able to visit the site.
+* As a non-registered user, I want to be able to view the different products available.
+* As a non-registered user, I want to be able to search for a particular product using the navbar.
+* As a non-registered user, I want to be able to see more information about the products by clicking on the ‘Find out more’ button.
+* As a non-registered user, I want to be able to visit the news page and read the latest news stories that are there.
+* As a non-registered user, I want to have the option to sign up so I can buy products from the site.
+* As a non-registered user, I want to be able to log in after I’ve signed up.
+* As a non-registered user, I want to be able to reset my password if I’ve forgotten it.
+* As a non-registered user, I want to be able to receive an email with instructions on how to go about resetting my password.
+* As a non-registered user, I want to have the option to log out afterwards.
 
 ## Features <hr>
 ### Existing Features
+* Navbar – The navbar, from [Bootstrap](https://getbootstrap.com/docs/4.0/components/navbar/), is fixed to the top of the screen to allow the user easy access to it at all times. It has links to the home page, the basket, the news page, and the search bar at all times. If the user is logged in, they’ll also see links to their profile page and a log out button. If they’re not logged in, they’ll see buttons to log in or to sign up.
+* Bootstrap JavaScript modal – I used the [Bootstrap JavaScript Modal](https://getbootstrap.com/docs/4.0/components/modal/) to create the modal that displays more information about each product to the user.
+* Stripe – Used to process the user’s payments when they check out and make an order. There are several steps a user must use to make a test payment using Stripe, and to test this website.
+1. For the credit card number, enter 4242 4242 4242 4242.
+2. For the credit card security code, or CVV, enter any three numbers.
+3. For the expiration date, enter any month or year, as long as they are in the future.
+Once the user has done this, the payment will go through.
+
+
 
 ## Technologies Used <hr>
 ### Programming Languages
@@ -62,6 +117,8 @@ I have identified three types main users who wold potentially be using this site
 * I used [Code Institute](https://codeinstitute.net/), [W3Schools](https://www.w3schools.com/), [Stack Overflow](https://stackoverflow.com/), and the Code Institute [Slack](https://slack.com/) to look for help with my code when I couldn’t solve a particular problem on my own.
 
 ### Tools
+* [Balsamiq](https://balsamiq.com/) – This program was used to create rough wireframes of the website’s homepage, in order for me to be able to visualise it properly before I began to actually build the site.
+* [Bootstrap](https://getbootstrap.com/) – I used this framework in order to put together the structure of the website, as well as implement features such as the navbar and the modal.
 
 ## Testing <hr>
 ## Screen Sizes And Devices
@@ -130,10 +187,10 @@ to ensure that everything worked as it was meant to.
 
 ### Content
 * Some of the information on the coffee products, as well as images of the products, was from the coffee brand’s own websites, such as the ones listed below.
-*[Coffee Planet](https://coffeeplanet.com/ground-coffee-c1/signature-arabic-ground-coffee-p25).
+* [Coffee Planet](https://coffeeplanet.com/ground-coffee-c1/signature-arabic-ground-coffee-p25).
 * [Rocket Bean Roastery](https://www.rocketbeanroastery.com/collections/rocketbean-coffee/products/magic-pussy-ethiopia-lot-11-espresso-200g-rocket-bean-roastery).
 * [HAYB](https://haybcoffee.pl/produkt/espresso/gwatemala-huehuetenango/).
-*[Five Elephant](https://www.fiveelephant.com/collections/coffee/products/guatemala-finca-el-socorro-maracaturra?variant=19099042181).
+* [Five Elephant](https://www.fiveelephant.com/collections/coffee/products/guatemala-finca-el-socorro-maracaturra?variant=19099042181).
 * [Taylors of Harrogate](https://www.taylorsofharrogate.co.uk/products/lazy-sunday/).
 * [Gonzo](https://nightjar.coffee/product/gonzo-seasonal-blend/). 
 
