@@ -49,7 +49,7 @@ def checkout(request):
             if customer.paid:
                 messages.error(request, "Hurrah! You've successfully paid!")
                 request.session['basket'] = {}
-                return redirect(reverse('products'))
+                return redirect(reverse('profile'))
             else:
                 messages.error(request, "We're unable to take your payment right now")
         else:
