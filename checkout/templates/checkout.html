@@ -32,13 +32,13 @@
 
                 <div class="caption">
                     <!-- Product name -->
-                    <h3 class="product-name">{{ item.product.name }}</h3>
+                    <h3 class="product-name text-center">{{ item.product.name }}</h3>
                     <!-- Truncated description of product -->
                     <p class="product-description">{{ item.product.description|truncatewords:20 }}</p>
                     <!-- Number of products in basket -->
                     <p><strong>Number of items -</strong> {{ item.quantity }}</p>
                     <!-- Product price -->
-                    <p><strong>Price -</strong> £{{ item.product.price }}</p>
+                    <p class="text-center"><strong>Price -</strong> £{{ item.product.price }}</p>
                 </div>
             </div>
         </div>

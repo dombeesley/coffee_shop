@@ -27,11 +27,11 @@
             
             <div class="caption">
                 <!-- Product name -->
-                <h3 class="product-name">{{ item.product.name }}</h3>
+                <h3 class="product-name text-center">{{ item.product.name }}</h3>
                 <!-- Product description -->
                 <p class="product-description">{{ item.product.description }}</p>
                 <!-- Product price -->
-                <p>£{{ item.product.price }}</p>
+                <p class="text-center">£{{ item.product.price }}</p>
                 <!-- Allows user to update number of products in the basket -->
                 <p> 
                     <form class="form-inline row" method="post" action="{% url 'edit_basket' item.id %}">

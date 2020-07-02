@@ -93,10 +93,11 @@ nav a:hover {
 
 .product-name{
     font-family: 'Pacifico', cursive;
+    min-height: 99px;
 }
 
 .product-description {
-    min-height: 40px;
+    min-height: 99px;
 }
 
 .product-btn{
