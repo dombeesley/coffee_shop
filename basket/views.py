@@ -33,3 +33,11 @@ def edit_basket(request, id):
 
     request.session['basket'] = basket
     return redirect(reverse('view_basket'))
+
+
+def remove_from_basket(request, id):
+    """Remove an item from the basket"""
+    basket = request.session.get('basket', {})
+    basket.pop(id)
+    request.session['basket'] = basket
+    return redirect(reverse('view_basket'))

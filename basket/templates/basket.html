@@ -48,7 +48,7 @@
                     </form>
                 </p>
                 <p class="text-center">
-                    <button href="#" class="btn btn-dark product-btn"><i class="fa fa-trash" aria-hidden="true"></i> Remove</button>
+                    <a href="{% url 'remove_from_basket' item.id %}" class="btn btn-dark product-btn"><i class="fa fa-trash" aria-hidden="true"></i> Remove</a>
                 </p>
             </div>
         </div>
