@@ -29,7 +29,7 @@
                 <!-- Product name -->
                 <h3 class="product-name text-center">{{ item.product.name }}</h3>
                 <!-- Product description -->
-                <p class="product-description">{{ item.product.description }}</p>
+                <p class="basket-description">{{ item.product.description }}</p>
                 <!-- Product price -->
                 <p class="text-center">£{{ item.product.price }}</p>
                 <!-- Allows user to update number of products in the basket -->
@@ -39,12 +39,16 @@
                         <div class="form-group col-6">
                             <label for="exampleInputAmount" class="sr-only">New amount</label>
                             <div class="input-group">
-                                <div class="input-group-addon">Quantity: </div>
-                                <input name="quantity" type="number" value="{{ item.quantity }}" min="0" max="999" class="form-control" placeholder="{{ item.quantity }}">
+                                <div class="input-group-addon">Quantity: 
+                                    <input name="quantity" type="number" value="{{ item.quantity }}" min="0" max="999" class="form-control" placeholder="{{ item.quantity }}">
+                                </div>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-dark product-btn col-4"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update</button>
                     </form>
+                </p>
+                <p class="text-center">
+                    <button href="#" class="btn btn-dark product-btn"><i class="fa fa-trash" aria-hidden="true"></i> Remove</button>
                 </p>
             </div>
         </div>

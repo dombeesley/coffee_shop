@@ -150,6 +150,10 @@ nav a:hover {
     margin-top:25px;
 }
 
+.basket-description {
+    min-height: 168px;
+}
+
 .total-panel{
     margin-bottom:30px;
     padding-bottom: 40px;
