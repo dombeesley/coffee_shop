@@ -56,6 +56,17 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a>
                             </li>
+
+                            <!-- Link to user's basket -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'view_basket' %}"><i class="fa fa-shopping-basket"></i> Basket
+                                    <!-- Displays number of products in basket -->
+                                    {% if product_count > 0 %}
+                                        <label class="badge badge-success">{{ product_count }}</label>
+                                    {% endif %}
+                                </a>
+                            </li>
+
                         <!-- Pages display if user isn't logged in -->
                         {%  else %}
                             <!-- Page for user to register and sign up -->
@@ -67,16 +78,6 @@
                                 <a class="nav-link" href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a>
                             </li>
                         {% endif %}
-
-                        <!-- Link to user's basket -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'view_basket' %}"><i class="fa fa-shopping-basket"></i> Basket
-                                <!-- Displays number of products in basket -->
-                                {% if product_count > 0 %}
-                                    <label class="badge badge-success">{{ product_count }}</label>
-                                {% endif %}
-                            </a>
-                        </li>
                         
                         <!-- Search box -->
                         <form action="{% url 'search' %}" method="get" class="form-inline">
