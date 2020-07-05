@@ -23,9 +23,17 @@
                 
             </form>
             <!-- Takes user to password reset page -->
-            <p class="login-link">Have you forgotten your password? <a class="btn btn-dark" href="{% url 'password_reset' %}">Click here to reset it.</a></p>
+            <p class="login-link">Have you forgotten your password? 
+                <a class="btn btn-dark" href="{% url 'password_reset' %}">
+                    <i class="fa fa-undo" aria-hidden="true"></i> Click here to reset it.
+                </a>
+            </p>
             <!-- Takes user to registration page -->
-            <p class="login-link">Or are you new here? <a class="btn btn-dark" href="{% url 'register' %}">Head here to sign up.</a></p>
+            <p class="login-link">Or are you new here? 
+                <a class="btn btn-dark" href="{% url 'register' %}">
+                    <i class="fa fa-user-plus"></i> Head here to sign up.
+                </a>
+            </p>
             
         </div>
     {% endblock %}
