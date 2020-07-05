@@ -154,6 +154,11 @@ nav a:hover {
     min-height: 168px;
 }
 
+.update-button{
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
 .total-panel{
     margin-bottom:30px;
     padding-bottom: 40px;

@@ -33,18 +33,18 @@
                 <!-- Product price -->
                 <p class="text-center">£{{ item.product.price }}</p>
                 <!-- Allows user to update number of products in the basket -->
-                <p> 
+                <p class="text-center"> 
                     <form class="form-inline row" method="post" action="{% url 'edit_basket' item.id %}">
                         {% csrf_token %}
-                        <div class="form-group col-6">
+                        <div class="form-group col-xs-12 col-md-10 offset-md-1">
                             <label for="exampleInputAmount" class="sr-only">New amount</label>
-                            <div class="input-group">
-                                <div class="input-group-addon">Quantity: 
+                            <div class="input-group mx-auto">
+                                <div class="input-group-addon mx-auto">Quantity: 
                                     <input name="quantity" type="number" value="{{ item.quantity }}" min="0" max="999" class="form-control" placeholder="{{ item.quantity }}">
+                                    <button type="submit" class="btn btn-dark product-btn update-button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update</button>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-dark product-btn col-4"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update</button>
                     </form>
                 </p>
                 <!-- Button to remove items that are in the basket -->
