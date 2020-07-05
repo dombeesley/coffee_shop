@@ -3,27 +3,29 @@
 
     {% block content %}
         <!-- Profile page to display user information -->
-        <div class="display panel panel-default login-panel row">
-            <div class="col-sm-12 col-md-6 offset-md-2">
-                <!-- Shows user's username -->
-                <h2 class="profile-title">Welcome back, {{ user }}!</h2>
-                <h3><i class="fa fa-user"></i> Your personal information:</h3>
-                <!-- User's email address -->
-                <h4>Your e-mail address is -</h4>
-                <p>{{ user.email }}</p>
-                <!-- User's username -->
-                <h4>Your username is -</h4>
-                <p>{{ user }}</p>
-                <!-- Button for user to reset their password -->
-                <a type="btn" class="btn btn-dark profile-btn" href="{% url 'password_reset' %}">
-                    <i class="fa fa-undo" aria-hidden="true"></i> Would you like to reset your password?
-                </a>
+        <div class="row">
+            <div class="display panel panel-default login-panel row col-sm-12 col-md-8 offset-md-2">
+                <div>
+                    <!-- Shows user's username -->
+                    <h2 class="profile-title">Welcome back, {{ user }}!</h2>
+                    <h3><i class="fa fa-user"></i> Your personal information:</h3>
+                    <!-- User's email address -->
+                    <h4>Your e-mail address is -</h4>
+                    <p>{{ user.email }}</p>
+                    <!-- User's username -->
+                    <h4>Your username is -</h4>
+                    <p>{{ user }}</p>
+                    <!-- Button for user to reset their password -->
+                    <a type="btn" class="btn btn-dark profile-btn" href="{% url 'password_reset' %}">
+                        <i class="fa fa-undo" aria-hidden="true"></i> Would you like to reset your password?
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="display panel panel-default login-panel row">
+        <div class="row">
             <!-- Shows user's order history -->
-            <div class="col-sm-12 col-md-6">
+            <div class="display panel panel-default login-panel col-sm-12 col-md-8 offset-md-2">
                 <h3><i class="fa fa-th-list" aria-hidden="true"></i> Order history:</h3>
                 <!-- Displays a table if user has made orders -->
                 {% if orders %}
