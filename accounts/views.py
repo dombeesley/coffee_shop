@@ -15,7 +15,7 @@ def index(request):
 def logout(request):
     """Log the user out"""
     auth.logout(request)
-    messages.success(request, "You have successfully been logged out")
+    messages.success(request, "You've successfully logged out! See you soon!")
     return redirect(reverse('index'))
 
 
@@ -35,7 +35,7 @@ def login(request):
                 auth.login(user=user, request=request)
                 return redirect(reverse('index'))
             else:
-                login_form.add_error(None, "Sorry, but your username or password is incorrect")
+                login_form.add_error(None, "Sorry, but your username or password is incorrect - try again?")
     else:
         login_form = UserLoginForm()
     return render(request, 'login.html', {'login_form': login_form})
