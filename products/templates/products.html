@@ -12,93 +12,94 @@
             {{ message }}
         </div>
      
-    {% endfor %}
-{% endif %}  
-<div class="container-fluid">
-<!-- Displays all products -->
-<div class="row product-panels">
-    <!-- Displays all products in reverse order -->
-    {% for product in products reversed %}
-        <div class="col-xs-12 col-sm-12 col-md-4 display panel panel-default">
-            <div class="product-info">
-                <!-- Image of product -->
-                <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
-                <!-- Name of product -->
-                <h3 class="product-name text-center">{{ product.name }}</h3>
-                <!-- Description of product - only first 20 words -->
-                <p class="product-description">{{ product.description|truncatewords:20 }}</p>
-                <!-- Price of product -->
-                <p class="text-center"><b>Price -</b> £{{ product.price }}</p>
+        {% endfor %}
+    {% endif %}  
 
-                <div>
-                    <!-- Button to open modal, displaying more information on the product -->
-                    <p class="text-center">
-                        <button type="button" class="btn btn-dark product-btn" data-toggle="modal" data-target="#myModal{{ product.id }}"><i class="fa fa-info-circle"></i> Find out more</button>
-                    </p>
-                    <!-- Displays button if user is authenticated -->
-                    {% if user.is_authenticated %}
-                        <!-- Button to add product or number of products to user's basket -->
-                        <form method="post" action="{% url 'add_to_basket' product.id %}">
-                            {% csrf_token %}
-                            <div class="input-group form-group">
-                                <input name="quantity" type="number" value="1" min="1" max="999" class="form-control" placeholder="Quantity">
-                                <span class="input-group-btn">
-                                    <button type="submit" class="btn btn-dark product-btn"><i class="fa fa-shopping-basket"></i> Add to Basket</button>
-                                </span>
-                            </div> 
-                        </form>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-<!-- Modal with more information on products -->
-        <div class="modal fade" id="myModal{{ product.id }}" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
+    <div class="container-fluid">
+        <!-- Displays all products -->
+        <div class="row product-panels">
+            <!-- Displays all products in reverse order -->
+            {% for product in products reversed %}
+                <div class="col-xs-12 col-sm-12 col-md-4 display panel panel-default">
+                    <div class="product-info">
+                        <!-- Image of product -->
+                        <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
                         <!-- Name of product -->
-                        <h4 class="modal-title product-name">{{ product.name }}</h4>
-                        <!-- Button to close modal window -->
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            &times; 
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="panel-body">
-                            <!-- Image of product -->
-                            <div class="product product-image modal-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}">
-                            </div>
-                            <!-- Description of product -->
-                            <p class="product-description modal-description">{{ product.description }} </p>
-                            <!-- Price of product -->
-                            <p><b>Price -</b> £{{ product.price }}</p>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <div class="row">
-                            <!-- Button to close modal window -->
-                            <button type="button" class="btn btn-dark modal-button col-10" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Close</button>
-                            
+                        <h3 class="product-name text-center">{{ product.name }}</h3>
+                        <!-- Description of product - only first 20 words -->
+                        <p class="product-description">{{ product.description|truncatewords:20 }}</p>
+                        <!-- Price of product -->
+                        <p class="text-center"><b>Price -</b> £{{ product.price }}</p>
+
+                        <div>
+                            <!-- Button to open modal, displaying more information on the product -->
+                            <p class="text-center">
+                                <button type="button" class="btn btn-dark product-btn" data-toggle="modal" data-target="#myModal{{ product.id }}"><i class="fa fa-info-circle"></i> Find out more</button>
+                            </p>
                             <!-- Displays button if user is authenticated -->
                             {% if user.is_authenticated %}
                                 <!-- Button to add product or number of products to user's basket -->
-                                <form class="col-10 modal-button" method="POST" action="{% url 'add_to_basket' product.id %}">
+                                <form method="post" action="{% url 'add_to_basket' product.id %}">
                                     {% csrf_token %}
                                     <div class="input-group form-group">
                                         <input name="quantity" type="number" value="1" min="1" max="999" class="form-control" placeholder="Quantity">
                                         <span class="input-group-btn">
                                             <button type="submit" class="btn btn-dark product-btn"><i class="fa fa-shopping-basket"></i> Add to Basket</button>
                                         </span>
-                                    </div>
+                                    </div> 
                                 </form>
                             {% endif %}
                         </div>
                     </div>
                 </div>
-            </div>  
-        </div>
 
-    {% endfor %}
-</div>
-</div>
-{% endblock %}
+                <!-- Modal with more information on products -->
+                <div class="modal fade" id="myModal{{ product.id }}" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- Name of product -->
+                                <h4 class="modal-title product-name">{{ product.name }}</h4>
+                                <!-- Button to close modal window -->
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    &times; 
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="panel-body">
+                                    <!-- Image of product -->
+                                    <div class="product product-image modal-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}">
+                                    </div>
+                                    <!-- Description of product -->
+                                    <p class="product-description modal-description">{{ product.description }} </p>
+                                    <!-- Price of product -->
+                                    <p><b>Price -</b> £{{ product.price }}</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="row">
+                                    <!-- Button to close modal window -->
+                                    <button type="button" class="btn btn-dark modal-button col-10" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Close</button>
+                                    
+                                    <!-- Displays button if user is authenticated -->
+                                    {% if user.is_authenticated %}
+                                        <!-- Button to add product or number of products to user's basket -->
+                                        <form class="col-10 modal-button" method="POST" action="{% url 'add_to_basket' product.id %}">
+                                            {% csrf_token %}
+                                            <div class="input-group form-group">
+                                                <input name="quantity" type="number" value="1" min="1" max="999" class="form-control" placeholder="Quantity">
+                                                <span class="input-group-btn">
+                                                    <button type="submit" class="btn btn-dark product-btn"><i class="fa fa-shopping-basket"></i> Add to Basket</button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %} 
