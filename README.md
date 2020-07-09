@@ -11,7 +11,7 @@ The project has been deployed using Heroku, and can be viewed at [http://domscof
 
 ## UX <hr>
 
-Add image of website on different devices from Am I Responsive.
+![Screenshot of website on different devices](media/images/coffeescreen.png)
 
 The aim of this project was to allow users to visit a website and buy products. My website, ‘The Coffee Break,’ is a website that’s been designed for users to visit and buy new coffee-related products, as well as find out about what’s happening in the coffee world by reading news stories on the news page.
 
