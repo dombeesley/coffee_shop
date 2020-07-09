@@ -6,6 +6,6 @@ from .models import Post
 
 
 def get_posts(request):
-
+    """Displays news posts by published date"""
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, "news.html", {'posts': posts})
