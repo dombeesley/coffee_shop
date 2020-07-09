@@ -87,6 +87,24 @@ I have identified three types main users who wold potentially be using this site
 * As a non-registered user, I want to be able to receive an email with instructions on how to go about resetting my password.
 * As a non-registered user, I want to have the option to log out afterwards.
 
+
+### Design Process
+
+#### Strategy
+In thinking about strategy, I had to consider the goals of the website, after coming up with the initial idea. Once I had decided that the website’s primary objective would be for the site owner to use it in order sell coffee products to the site’s users, I set about creating the lists of user stories. These helped me to realise who would be using the site and what I hoped they could get out of the finished product.
+
+#### Scope
+Once I knew what the website’s main aims were, I could think about the scope of the project. This involved deciding what the project’s main features would be. For example, I wanted users to be able to add products to their basket, and then remove them or update the amounts of products later on. I also wanted the website to be more than just a shop, so the news page, which could be updated with coffee-related stories, was another key feature that could keep users coming back. Other features could be added to the site in the future, to give it more of a community feel for its registered users.
+
+#### Structure
+Thinking about the structure of the site, I focused on the layout of the pages, and how things were laid out. For example, I added buttons for the user wherever I could, that would direct them to where they needed to be. I also planned out the main pages of the site, which were laid out in the navbar. I also wanted to ensure that users couldn’t get to parts of the site they weren’t meant to get to – for example, users who aren’t logged in or registered can’t add products to a basket, or even see the button that allows them to add products to a basket.
+
+#### Skeleton
+During the skeleton plane section of the website’s planning, I thought carefully about the form of the website, and the visuals that would appeal to the user. For example, I planned to add relevant icons from Font Awesome that would ensure users could understand what the button meant. I also made sure there was a similar layout on every page, establishing a visual continuity for the user.
+
+#### Surface
+Lastly, I considered the website’s visual identity. As it was a coffee-based website, I decided to make the background image a picture of sacking, reminding the user of a burlap sack used to hold coffee beans. The dark colour palette of the site was also meant to be reminiscent of coffee. I also decide to give the website a simplified layout, as I didn’t want to potentially overwhelm the user with too much information.
+
 ## Features <hr>
 ### Existing Features
 * Navbar – The navbar, from [Bootstrap](https://getbootstrap.com/docs/4.0/components/navbar/), is fixed to the top of the screen to allow the user easy access to it at all times. It has links to the home page, the basket, the news page, and the search bar at all times. If the user is logged in, they’ll also see links to their profile page and a log out button. If they’re not logged in, they’ll see buttons to log in or to sign up.
@@ -145,7 +163,6 @@ to ensure that everything worked as it was meant to.
 * I validated the HTML code using the [W3C Markup Validation service](https://validator.w3.org/), and no errors were found.
 * I validated the CSS code using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/), and no errors were found.
 * I validated the code for the .travis.yml file using the [YAML Validator](http://www.yamllint.com/), and no errors were found.
-
 
 ## Deployment <hr>
 ### Introduction
