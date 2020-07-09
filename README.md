@@ -144,6 +144,7 @@ to ensure that everything worked as it was meant to.
 * I used [Am I Responsive?](http://ami.responsivedesign.is/#) to check the responsiveness of the website. Using this online tool, I was able to see what the website looked like on several different devices and screen sizes at the same time, and compare them all to each other to check that they looked right. 
 * I validated the HTML code using the [W3C Markup Validation service](https://validator.w3.org/), and no errors were found.
 * I validated the CSS code using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/), and no errors were found.
+* I validated the code for the .travis.yml file using the [YAML Validator](http://www.yamllint.com/), and no errors were found.
 
 
 ## Deployment <hr>
