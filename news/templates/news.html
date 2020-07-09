@@ -48,7 +48,8 @@
                                                         <!-- Post's content -->
                                                         <p>{{ post.content|linebreaks }}</p>
                                                         <!-- Post information, including publication date and views -->
-                                                        <p><b>Published on:</b> {{ post.published_date }} <b>Views:</b> {{post.views}} </p>
+                                                        <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> <b>Published on:</b> {{ post.published_date }}</p>
+                                                        <p><i class="fa fa-eye" aria-hidden="true"></i> <b>Views:</b> {{post.views}}</p>
                                                         <!-- Post's tags -->
                                                         <p><b> Tags:</b> {{ post.tag }}</p>
                                                     </div>
