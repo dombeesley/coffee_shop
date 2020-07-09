@@ -9,7 +9,7 @@ User = get_user_model()
 
 
 class Order(models.Model):
-    # Need to set user as current user's username by default. How?
+    # Model for user's order
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE, null=True, editable=False, related_name='orders', verbose_name="Your username:")
     full_name = models.CharField(max_length=50, blank=False, verbose_name="Your full name:")
     phone_number = models.CharField(max_length=20, blank=False, verbose_name="Your phone number:")
@@ -26,6 +26,7 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    # Information for items in user's order
     order = models.ForeignKey(Order, null=False)
     product = models.ForeignKey(Product, null=False)
     quantity = models.IntegerField(blank=False)
