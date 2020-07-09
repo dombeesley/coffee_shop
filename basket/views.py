@@ -5,10 +5,12 @@ from django.contrib import messages
 
 
 def view_basket(request):
+    """Display basket to user"""
     return render(request, "basket.html")
 
 
 def add_to_basket(request, id):
+    """Allows user to add items to their basket"""
     quantity = int(request.POST.get('quantity'))
 
     basket = request.session.get('basket', {})
@@ -23,6 +25,7 @@ def add_to_basket(request, id):
 
 
 def edit_basket(request, id):
+    """Allows user to edit the number of items in their basket"""
     quantity = int(request.POST.get('quantity'))
     basket = request.session.get('basket', {})
 
@@ -36,7 +39,7 @@ def edit_basket(request, id):
 
 
 def remove_from_basket(request, id):
-    """Remove an item from the basket"""
+    """Removes an item from the user's basket"""
     basket = request.session.get('basket', {})
     basket.pop(id)
     request.session['basket'] = basket
