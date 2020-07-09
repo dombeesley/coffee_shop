@@ -1,5 +1,7 @@
 # Dominic Beesley’s 4th Milestone Project
 
+[![Build Status](https://travis-ci.org/dombeesley/coffee_shop.svg?branch=master)](https://travis-ci.org/dombeesley/coffee_shop)
+
 This project is my fourth milestone project for Code Institute, and it’s the Full Stack Frameworks with Django Milestone Project. The aim of the project, according to the project guidelines, was to build a full-stack site based around business logic used to control a centrally-owned dataset. The project also contains an authentication mechanism, and allows users paid access to the site's data and or other activities based on the dataset, such as the purchase of a product service.
 
 In order to fulfil these aims, I’ve created a website that I’ve called ‘The Coffee Break.’ The website allows users to register and purchase bags of coffee or coffee accessories from around the world, as well as read about coffee-related news stories from around the world.
