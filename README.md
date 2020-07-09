@@ -97,7 +97,8 @@ I have identified three types main users who wold potentially be using this site
 3. For the expiration date, enter any month or year, as long as they are in the future.
 Once the user has done this, the payment will go through.
 
-
+### Features To Implement Later
+*  If I’d had more time to add more features to the site, I would have added a feature that allowed the user to sort the available products. This would allow them to view a selection of them rather than all available products, sorting them by type, or even sorting the varieties of coffee by which country they’d come from.
 
 ## Technologies Used <hr>
 ### Programming Languages
