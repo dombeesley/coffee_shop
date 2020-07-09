@@ -14,7 +14,6 @@
         </div>
     </div>
 
-
     <div class="container">
         <div class="news-stories row">
             <div class="col-xs-12">
@@ -32,35 +31,33 @@
                                     <p class="authorinfo"><b>Author:</b> The Coffee Break</p>
                                 </div>
                             </div>
-                                <div class="row">
-                                    <div class="col-sm-10 offset-sm-1">
-                                        
-                                        <!-- Post's title -->
-                                            <h3 class="post-title">{{ post.title }}</h3>
-                                                <!-- Displays post image if there is one -->
-                                                {% if post.image %}
-                                                    <img class="post-img rounded mx-auto d-block" src="/media/{{ post.image }}">
-                                                {% endif %}
-                                            
-                                                <div class="row post-content">
-                                                    <div class="col-12">
-                                                        <!-- Post's content -->
-                                                        <p>{{ post.content|linebreaks }}</p>
-                                                        <!-- Post publication date -->
-                                                        <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> <b>Published on:</b> {{ post.published_date }}</p>
-                                                        <!-- Number of views of post -->
-                                                        <p><i class="fa fa-eye" aria-hidden="true"></i> <b>Views:</b> {{post.views}}</p>
-                                                        <!-- Post's tags -->
-                                                        <p><i class="fa fa-tags" aria-hidden="true"></i> <b>Tags:</b> {{ post.tag }}</p>
-                                                    </div>
+                            <div class="row">
+                                <div class="col-sm-10 offset-sm-1">
+                                    <!-- Post's title -->
+                                    <h3 class="post-title">{{ post.title }}</h3>
+                                        <!-- Displays post image if there is one -->
+                                        {% if post.image %}
+                                            <img class="post-img rounded mx-auto d-block" src="/media/{{ post.image }}">
+                                        {% endif %}        
+                                        <div class="row post-content">
+                                            <div class="col-12">
+                                                <!-- Post's content -->
+                                                <p>{{ post.content|linebreaks }}</p>
+                                                <!-- Post publication date -->
+                                                <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> <b>Published on:</b> {{ post.published_date }}</p>
+                                                <!-- Number of views of post -->
+                                                <p><i class="fa fa-eye" aria-hidden="true"></i> <b>Views:</b> {{post.views}}</p>
+                                                <!-- Post's tags -->
+                                                <p><i class="fa fa-tags" aria-hidden="true"></i> <b>Tags:</b> {{ post.tag }}</p>
                                                 </div>
-                                    </div>
+                                          </div>
                                 </div>
                             </div>
-                        </div>    
-                    {% endfor %}
-                </div>
+                        </div>
+                    </div>    
+                {% endfor %}
             </div>
         </div>
+    </div>
 
 {% endblock %}
