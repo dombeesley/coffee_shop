@@ -47,11 +47,12 @@
                                                     <div class="col-12">
                                                         <!-- Post's content -->
                                                         <p>{{ post.content|linebreaks }}</p>
-                                                        <!-- Post information, including publication date and views -->
+                                                        <!-- Post publication date -->
                                                         <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i> <b>Published on:</b> {{ post.published_date }}</p>
+                                                        <!-- Number of views of post -->
                                                         <p><i class="fa fa-eye" aria-hidden="true"></i> <b>Views:</b> {{post.views}}</p>
                                                         <!-- Post's tags -->
-                                                        <p><b> Tags:</b> {{ post.tag }}</p>
+                                                        <p><i class="fa fa-tags" aria-hidden="true"></i> <b>Tags:</b> {{ post.tag }}</p>
                                                     </div>
                                                 </div>
                                     </div>
