@@ -36,7 +36,9 @@
                                     <div class="col-sm-10 offset-sm-1">
                                         
                                         <!-- Post's title -->
-                                        <h3 class="post-title">{{ post.title }}</h3>
+                                        <a href="{{ post.get_absolute_url }}"> 
+                                            <h3 class="post-title">{{ post.title }}</h3>
+                                        </a>
                                         
                                                 <!-- Displays post image if there is one -->
                                                 {% if post.image %}
