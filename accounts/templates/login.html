@@ -16,6 +16,7 @@
         <div class="display panel panel-default login-panel">
             <h2>Enter your details below:</h2>
             <form method="POST">
+
                 {% csrf_token %} 
                 {{ login_form | as_bootstrap }}
                 <!-- Log in button -->
