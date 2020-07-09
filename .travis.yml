@@ -1,6 +1,8 @@
 language: python
 python:
 - "3.8.2"
+# Installs dependencies
 install: "pip install -r requirements.txt"
+# Runs tests
 script:
-- SECRET_KEY="whatever" python3 manage.py test
+- SECRET_KEY="whatever" python manage.py test
